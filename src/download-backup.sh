@@ -17,7 +17,6 @@ if [ -z "$OPNSENSE_DOMAIN" ]; then
   exit 1
 fi
 
-
 DATETIME=$(date +%Y%m%d-%H%M%S)
 curl -u "${OPNSENSE_USER_KEY}:${OPNSENSE_USER_SECRET}" \
   "https://${OPNSENSE_DOMAIN}/api/core/backup/download/this" \

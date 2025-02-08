@@ -11,4 +11,4 @@ VOLUME /config
 
 COPY src/* /
 WORKDIR /
-ENTRYPOINT ["/download-backup.sh /config/"]
+ENTRYPOINT ["/download-backup.sh", "/config/"]
