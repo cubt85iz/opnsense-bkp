@@ -5,6 +5,9 @@ After=network-online.target nss-lookup.target
 
 [Container]
 ContainerName=%p
-Image=ghcr.io/cubt85iz/opnsense-bkp:latest
+Image=opnsense-bkp.build
 Volume=${CONTAINER_PATH}/config:/config:Z
 AutoUpdate=registry
+
+[Service]
+ExecCondition=/usr/bin/test -d "${CONTAINER_PATH}/config"
